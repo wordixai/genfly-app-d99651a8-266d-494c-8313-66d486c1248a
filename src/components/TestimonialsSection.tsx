@@ -10,7 +10,7 @@ const TestimonialsSection = () => {
       side: "left"
     },
     {
-      text: "我想学做饭但害怕半途而废；Macaron 为我制作了一个"初学者烹饪日记"，两周后我可以自己做三道菜。",
+      text: "我想学做饭但害怕半途而废；Macaron 为我制作了一个「初学者烹饪日记」，两周后我可以自己做三道菜。",
       bgColor: "#ff5816",
       textColor: "#ffffff",
       avatar: "https://macaron.im/assets/image/avatar-2.jpg",
@@ -31,7 +31,7 @@ const TestimonialsSection = () => {
       side: "right"
     },
     {
-      text: "有一天我说我累了，它用文字"奉上"一杯茉莉花茶。那种温柔的关怀真的感动了我。",
+      text: "有一天我说我累了，它用文字「奉上」一杯茉莉花茶。那种温柔的关怀真的感动了我。",
       bgColor: "#eade39",
       textColor: "#55000b",
       avatar: "https://macaron.im/assets/image/avatar-1.jpg",
