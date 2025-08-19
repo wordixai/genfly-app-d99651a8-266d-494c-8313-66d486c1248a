@@ -31,7 +31,7 @@ const TestimonialsSection = () => {
       side: "right"
     },
     {
-      text: "有一天我说我累了，它用文字 "奉上" 一杯茉莉花茶。那种温柔的关怀真的感动了我。",
+      text: "有一天我说我累了，它用文字"奉上"一杯茉莉花茶。那种温柔的关怀真的感动了我。",
       bgColor: "#eade39",
       textColor: "#55000b",
       avatar: "https://macaron.im/assets/image/avatar-1.jpg",
