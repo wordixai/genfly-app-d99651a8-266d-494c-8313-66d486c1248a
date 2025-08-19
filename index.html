@@ -1,17 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh" class="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
-    <meta name="description" content="genfly Generated Project" />
-    <meta name="author" content="genfly" />
-    <meta property="og:image" content="/og-image.png" /> 
+    <title>Macaron - 世界上第一个 Personal AI Agent</title>
+    <meta name="description" content="Macaron AI - 世界上第一个 Personal AI Agent。其他 AI 助手帮助你工作。Macaron 帮助你生活得更好。" />
+    <meta name="author" content="Macaron AI" />
+    <meta property="og:title" content="Macaron - 世界上第一个 Personal AI Agent" />
+    <meta property="og:description" content="其他 AI 助手帮助你工作。Macaron 帮助你生活得更好。" />
+    <meta property="og:image" content="/og-image.png" />
+    <link rel="icon" href="/favicon.ico" />
   </head>
 
   <body>
+    <!-- SVG filter for noise effect -->
+    <svg width="0" height="0" xmlns="http://www.w3.org/2000/svg" style="position:absolute">
+      <filter id="noiseFilter" x="0" y="0" width="100" height="100" filterUnits="objectBoundingBox">
+        <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"></feTurbulence>
+        <feColorMatrix type="saturate" values="0"></feColorMatrix>
+      </filter>
+    </svg>
+    
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <script type="module" src="https://www.genfly.dev/editor.js"></script>
   </body>
 </html>

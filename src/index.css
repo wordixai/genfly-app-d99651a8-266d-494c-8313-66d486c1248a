@@ -2,17 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-   
+    /* Macaron Theme Colors */
+    --primary: 246 58 60; /* #F63A3C - Main red */
+    --primary-foreground: 255 255 255; /* White text on primary */
+    --secondary: 240 238 233; /* #F0EEE9 - Light beige */
+    --secondary-foreground: 22 21 21; /* Dark text */
+    --background: 249 247 241; /* #F9F7F1 - Main background */
+    --foreground: 22 21 21; /* #161615 - Main text */
+    --muted: 89 88 86; /* #595856 - Muted text */
+    --muted-foreground: 89 88 86;
+    --card: 255 255 255;
+    --card-foreground: 22 21 21;
+    --popover: 255 255 255;
+    --popover-foreground: 22 21 21;
+    --border: 233 231 226; /* #E9E7E2 */
+    --input: 233 231 226;
+    --accent: 255 255 255;
+    --accent-foreground: 22 21 21;
+    --destructive: 239 68 68;
+    --destructive-foreground: 248 250 252;
+    --ring: 246 58 60;
+    --radius: 0.75rem;
+    
+    /* Macaron specific gradients */
+    --macaron-gradient: linear-gradient(135deg, #FF596C, #FF8A80);
+    --macaron-bg-gradient: radial-gradient(circle, #FFE6D1, #F9F7F1);
   }
 
   .dark {
-
+    --background: 22 21 21;
+    --foreground: 249 247 241;
+    --card: 22 21 21;
+    --card-foreground: 249 247 241;
+    --popover: 22 21 21;
+    --popover-foreground: 249 247 241;
+    --primary: 246 58 60;
+    --primary-foreground: 255 255 255;
+    --secondary: 38 37 36;
+    --secondary-foreground: 249 247 241;
+    --muted: 38 37 36;
+    --muted-foreground: 163 163 163;
+    --accent: 38 37 36;
+    --accent-foreground: 249 247 241;
+    --destructive: 127 29 29;
+    --destructive-foreground: 249 247 241;
+    --border: 38 37 36;
+    --input: 38 37 36;
+    --ring: 246 58 60;
   }
 }
 
@@ -23,5 +61,34 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .macaron-gradient {
+    background: var(--macaron-gradient);
+  }
+  
+  .noise-background {
+    position: relative;
+  }
+  
+  .noise-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGZpbHRlciBpZD0ibm9pc2VGaWx0ZXIiIHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iMC44IiBudW1PY3RhdmVzPSIzIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ3aGl0ZSIgZmlsdGVyPSJ1cmwoI25vaXNlRmlsdGVyKSIgb3BhY2l0eT0iMC4xIi8+PC9zdmc+');
+    background-size: 100px 100px;
+    border-radius: inherit;
+    pointer-events: none;
+  }
+  
+  .hero-gradient {
+    background: var(--macaron-bg-gradient);
+    background-position: -10% 0%;
+    background-size: 120% 100%;
   }
 }
